@@ -1,36 +1,15 @@
 #I want to test each number to see if the first and last digit are the same
-# if they are, then i want to check that it is not divisible by any number other than 1 and itself.
+
+#Prime = A number is not divisible by any number other than itself.
+#I would need to check that a number % every number underneath it != 0.
 
 
+numbers = range(2, 1000)
+# num = 1000
+# potential_primes = []
+# potential_palin = []
 
-numbers = range(1, 1000)
-not_prime = []
-potential_primes = []
-potential_palin = []
-
-def prime_check(x):
-    for i in x:     #this is not printing out the right numbers........
-        if i % 2 == 0:
-            not_prime.append(i)
-        elif i % 3 == 0:
-            not_prime.append(i)
-        elif i % 4 == 0:
-            not_prime.append(i)
-        elif i % 5 == 0:
-            not_prime.append(i)
-        elif i % 6 == 0:
-            not_prime.append(i)
-        elif i % 7 == 0:
-            not_prime.append(i)
-        elif i % 8 == 0:
-            not_prime.append(i)
-        elif i % 9 == 0:
-            not_prime.append(i)
-        else:
-            potential_primes.append(i)
-    return potential_primes
-
-def palindrome_check(a):    # this is working like it should
+def is_palin(a):
     for i in a:
         if i > 1:
             x = str(i)
@@ -38,11 +17,19 @@ def palindrome_check(a):    # this is working like it should
                 pass
             if x[0] == x[-1]:
                 y = int(x)
-                potential_palin.append(y)
-    return potential_palin
+                prime_check(y)
+            return y
+
+def prime_check(n):
+    z = range(2, n)
+    if (n % z) != 0:
+        return n
+
+# print prime_check(numbers)
+print is_palin(numbers)
 
 
-print prime_check(numbers)
-print palindrome_check(numbers)
+
+
 
 # print to "stdout" largest prime number
