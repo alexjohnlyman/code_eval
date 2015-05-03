@@ -3,33 +3,24 @@
 #Prime = A number is not divisible by any number other than itself.
 #I would need to check that a number % every number underneath it != 0.
 
-
-numbers = range(2, 1000)
-# num = 1000
-# potential_primes = []
-# potential_palin = []
-
-def is_palin(a):
-    for i in a:
-        if i > 1:
-            x = str(i)
-            if x[0] != x[-1]:
-                pass
-            if x[0] == x[-1]:
-                y = int(x)
-                prime_check(y)
-            return y
-
-def prime_check(n):
-    z = range(2, n)
-    if (n % z) != 0:
-        return n
-
-# print prime_check(numbers)
-print is_palin(numbers)
-
-
-
-
-
 # print to "stdout" largest prime number
+
+# prime_palin = []
+#
+# def stdout():
+#     for num in range(3, 1001):
+#         for i in range(2, num):
+#             if (num % i) == 0:
+#                 break
+#         else:
+#             palindrome(num)
+#     return prime_palin[-1]
+#
+#
+# def palindrome(y):
+#     y = str(y)
+#     if y[0] == y[-1]:
+#         prime_palin.append(y)
+#     return prime_palin
+#
+# print stdout()
