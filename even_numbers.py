@@ -13,27 +13,34 @@
 # 1
 # All numbers in input are integers > 0 and < 5000.
 
+
+
+
+# Option to write out numbers to a new file
 # def even_numbers(file_name):
-#     with open(file_name, 'r+') as f:
-#         for line in f:
-#             if line % 2 == 0:
-#                 print 1
-#             else:
-#                 print 0
+#     input = open(file_name, 'r+')
+#     output = open('new_file.txt', 'w+')
+#     for line in list(input):
+#         line = int(line)
+#         if line % 2 == 0:
+#             output.write("1\n")
+#         else:
+#             output.write("0\n")
+#     output.close()
+#     input.close()
+#     return 'new_file.txt'
+#
+# even_numbers('evennumbers.txt')
 
-def even_numbers(file_name):
-    input = open(file_name, 'r+')
-    output = open('new_file.txt', 'w+')
-    for line in list(input):
-        print line
-        line = int(line)
-        if line % 2 == 0:
-            output.write("1\n")
-        else:
-            output.write("0\n")
-    output.close()
-    input.close()
-
-even_numbers('evennumbers.txt')
-
-
+#Option to 'print' the numbers
+# def even_numbers(file_name):
+#     input = open(file_name, 'r+')
+#     for line in list(input):
+#         line = int(line)
+#         if line % 2 == 0:
+#             print("1")
+#         else:
+#             print("0")
+#     input.close()
+#
+# even_numbers('evennumbers.txt')
