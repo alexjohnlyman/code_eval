@@ -6,14 +6,12 @@
 # INPUT SAMPLE:
 # HELLO CODEEVAL
 # This is some text
-#
+
 # OUTPUT SAMPLE:
 # hello codeeval
 # this is some text
-#
+
 # Print to stdout, the lowercase version of the sentence, each on a new line.
-
-
 
 
 # def stdout(filename):
@@ -24,12 +22,10 @@
 # print stdout()
 
 
-
-
 def stdout(filename):
     input = open(filename, 'r+')
     for line in input:
-        return line.lower()
+        print line.lower()
 
 print stdout('lowercase.txt')
 

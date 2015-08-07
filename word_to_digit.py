@@ -16,9 +16,20 @@
 # 025784
 # 37892
 
-
-my_dict = {'zero:0', 'one:1', 'two:2', 'three:3', 'four:4', 'five:5', 'six:6', 'seven:7', 'eight:8', 'nine:9'}
-
-test = zero;two;five;seve;eight;four
-
-def change(test):
+# test = ("zero", "two", "five", "seven", "eight", "four")
+# my_dict = {'zero:0', 'one:1', 'two:2', 'three:3', 'four:4', 'five:5', 'six:6', 'seven:7', 'eight:8', 'nine:9'}
+#
+#
+# def replace_all(text, my_dict):
+#     for text, number in my_dict:
+#         text = text.replace(text, number)
+#     return text
+#
+#
+# def change(filename):
+#     with open(filename, 'r') as in_file:
+#         text = in_file.read()
+#     with open() as out_file:
+#         out_file.write(replace_all(text, my_dict))
+#
+# print change('test_file.txt')
