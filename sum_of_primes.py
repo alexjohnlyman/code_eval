@@ -8,9 +8,7 @@ primes = []
 
 def stdout():
     count = 3
-    # num = 1
-    while count < 200:
-        # num += 1
+    while len(primes) < 200:
         for y in range(2, count + 1):
             for i in range(2, count):
                 if (y % i) == 0:

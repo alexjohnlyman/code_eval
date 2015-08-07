@@ -2,7 +2,8 @@
 #
 # Given a string write a program to convert it into lowercase.
 # The first argument will be a path to a filename containing sentences, one per line.
-# You can assume all characters are from the english language. E.g.
+# You can assume all characters are from the english language.
+
 # INPUT SAMPLE:
 # HELLO CODEEVAL
 # This is some text
@@ -13,6 +14,7 @@
 
 # Print to stdout, the lowercase version of the sentence, each on a new line.
 
+# Testing
 
 # def stdout(filename):
 #     input = open(filename, 'r+')
@@ -21,7 +23,6 @@
 #
 # print stdout()
 
-# Testing
 # def stdout(filename):
 #     input = open(filename, 'r+')
 #
