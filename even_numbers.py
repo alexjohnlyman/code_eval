@@ -15,7 +15,6 @@
 
 
 
-
 # Option to write out numbers to a new file
 # def even_numbers(file_name):
 #     input = open(file_name, 'r+')
@@ -32,15 +31,36 @@
 #
 # even_numbers('evennumbers.txt')
 
-#Option to 'print' the numbers
-# def even_numbers(file_name):
-#     input = open(file_name, 'r+')
+
+#Option to 'print' the numbers (CORRECT ANSWER)
+
+# import sys
+
+# For Testing
+# def even_numbers(input):
+#     input = open(sys.argv[1], 'r+')
 #     for line in list(input):
-#         line = int(line)
-#         if line % 2 == 0:
-#             print("1")
+#         if line == "":
+#             continue
 #         else:
-#             print("0")
+#             line = int(line)
+#             if line % 2 == 0:
+#                 print '{}' .format('1')
+#             else:
+#                 print '{}' .format('0')
 #     input.close()
 #
 # even_numbers('evennumbers.txt')
+
+# Final answer
+# input = open(sys.argv[1], 'r+')
+# for line in list(input):
+#     if line == "":
+#         continue
+#     else:
+#         line = int(line)
+#         if line % 2 == 0:
+#             print '{}' .format('1')
+#         else:
+#             print '{}' .format('0')
+# input.close()
