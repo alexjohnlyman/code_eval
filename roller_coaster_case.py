@@ -29,28 +29,22 @@
 
 # Testing
 def stdout(filename):
-    input = open(filename, 'r+')
+    f = open(filename, 'r+')
+    data = f.read()
     count = 2
-    for line in input:
-        for letter in line:
-            if letter in 'abcdefghijklmnopqrstuvwxyz':
-                if count % 2 == 0:
-                    letter.upper()
-                    count += 1
-                elif count % 2 != 0:
-                    letter.lower()
-                    count += 1
+    for letter in data:
+        letter = letter.lower()
+        if letter in 'abcdefghijklmnopqrstuvwxyz':
+            if count % 2 == 0:
+                print letter.upper()
             else:
-                continue
-    input.close()
+                print letter.lower()
+        else:
+            print count
+            continue
+        count += 1
 
-    #     if line == "":
-    #         continue
-    #     else:
-    #         new_line = line.lower()
-    #         for lower_line in new_line
-
-print stdout('lowercase.txt')
+stdout('lowercase.txt')
 
 # Final answer
 # import sys
