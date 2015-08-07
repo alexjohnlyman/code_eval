@@ -1,6 +1,4 @@
-
-# search a file
-# replace x with
+# Fizz Buzz, with a twist
 
 # def change_fizz(x, y, n):
 #     for i in my_list:
@@ -14,37 +12,73 @@
 #             j == "Buzz"
 #         return my_list
 
-numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30)
+
+# Test
+# x = 2
+# y = 7
+# n = 42
+#
+# line = ""
+# for k in range(1, n):
+#     if (k % x == 0) and (k % y == 0):
+#         k = " FB"
+#         line += str(k)
+#     elif k % x == 0:
+#         k = " F"
+#         line += str(k)
+#     elif k % y == 0:
+#         k = " B"
+#         line += str(k)
+#     else:
+#         k = "{0: }".format(k)
+#         line += str(k)
+# print line.strip()
+
+# Test 2
+def test_this(filename):
+    f = open(filename, 'r+')
+    for line in f:
+        x = int(line[0])
+        y = int(line[2])
+        n = int(str(line[4]) + str(line[5]))
+        line = ""
+        for k in range(1, n):
+            if (k % x == 0) and (k % y == 0):
+                k = " FB"
+                line += str(k)
+            elif k % x == 0:
+                k = " F"
+                line += str(k)
+            elif k % y == 0:
+                k = " B"
+                line += str(k)
+            else:
+                k = "{0: }".format(k)
+                line += str(k)
+        print line.strip()
+test_this("test.txt")
 
 
-def fizz_buzz(file_name):
-    with open(file_name, 'r+') as f:
-        lines = f.read()
-        x = str(lines[0])
-        y = str(lines[2])
-        n_1 = str(lines[4])
-        n_2 = str(lines[5])
-        n = n_1 + n_2
-        print n
-    for k in range(21, n + 21):
+# Final Answer
+import sys
+
+f = open(sys.argv[1], 'r+')
+for line in f:
+    x = int(line[0])
+    y = int(line[2])
+    n = int(str(line[4]) + str(line[5]))
+    line = ""
+    for k in range(1, n):
         if (k % x == 0) and (k % y == 0):
-            k == "FB"
-            print "FB"
+            k = " FB"
+            line += str(k)
         elif k % x == 0:
-            k == "F"
-            print "F"
+            k = " F"
+            line += str(k)
         elif k % y == 0:
-            k == "B"
-            print "B"
-        return k
-
-
-fizz_buzz('test.txt')
-
-
-        # X = lines[0]
-        # Y = lines[1]
-        # N = lines[2]
-        # return lines
-
-
+            k = " B"
+            line += str(k)
+        else:
+            k = "{0: }".format(k)
+            line += str(k)
+    print line.strip()

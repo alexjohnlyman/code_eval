@@ -28,41 +28,41 @@
 
 
 # Testing
-def stdout(filename):
-    f = open(filename, 'r+')
-    for line in f:
-        letter_count = 1
-        full_line = ""
-        for letter in line:
-            letter = letter.lower()
-            if letter in 'abcdefghijklmnopqrstuvwxyz':
-                letter_count += 1
-                if letter_count % 2 == 0:
-                    full_line += letter.upper()
-                else:
-                    full_line += letter.lower()
-            else:
-                full_line += letter
-        print full_line
-
-stdout('lowercase.txt')
+# def stdout(filename):
+#     f = open(filename, 'r+')
+#     for line in f:
+#         letter_count = 1
+#         full_line = ""
+#         for letter in line:
+#             letter = letter.lower()
+#             if letter in 'abcdefghijklmnopqrstuvwxyz':
+#                 letter_count += 1
+#                 if letter_count % 2 == 0:
+#                     full_line += letter.upper()
+#                 else:
+#                     full_line += letter.lower()
+#             else:
+#                 full_line += letter
+#         print full_line
+#
+# stdout('lowercase.txt')
 
 
 # Final answer
-import sys
-
-f = open(sys.argv[1], 'r+')
-for line in f:
-    letter_count = 1
-    full_line = ""
-    for letter in line:
-        letter = letter.lower()
-        if letter in 'abcdefghijklmnopqrstuvwxyz':
-            letter_count += 1
-            if letter_count % 2 == 0:
-                full_line += letter.upper()
-            else:
-                full_line += letter.lower()
-        else:
-            full_line += letter
-    print full_line
+# import sys
+#
+# f = open(sys.argv[1], 'r+')
+# for line in f:
+#     letter_count = 1
+#     full_line = ""
+#     for letter in line:
+#         letter = letter.lower()
+#         if letter in 'abcdefghijklmnopqrstuvwxyz':
+#             letter_count += 1
+#             if letter_count % 2 == 0:
+#                 full_line += letter.upper()
+#             else:
+#                 full_line += letter.lower()
+#         else:
+#             full_line += letter
+#     print full_line
