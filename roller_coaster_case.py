@@ -30,26 +30,39 @@
 # Testing
 def stdout(filename):
     f = open(filename, 'r+')
-    data = f.read()
-    count = 2
-    for letter in data:
-        letter = letter.lower()
-        if letter in 'abcdefghijklmnopqrstuvwxyz':
-            if count % 2 == 0:
-                print letter.upper()
+    for line in f:
+        letter_count = 1
+        full_line = ""
+        for letter in line:
+            letter = letter.lower()
+            if letter in 'abcdefghijklmnopqrstuvwxyz':
+                letter_count += 1
+                if letter_count % 2 == 0:
+                    full_line += letter.upper()
+                else:
+                    full_line += letter.lower()
             else:
-                print letter.lower()
-        else:
-            print count
-            continue
-        count += 1
+                full_line += letter
+        print full_line
 
 stdout('lowercase.txt')
 
+
 # Final answer
-# import sys
-#
-#
-# input = open(sys.argv[1], 'r+')
-# for line in input:
-#     print line.lower()
+import sys
+
+f = open(sys.argv[1], 'r+')
+for line in f:
+    letter_count = 1
+    full_line = ""
+    for letter in line:
+        letter = letter.lower()
+        if letter in 'abcdefghijklmnopqrstuvwxyz':
+            letter_count += 1
+            if letter_count % 2 == 0:
+                full_line += letter.upper()
+            else:
+                full_line += letter.lower()
+        else:
+            full_line += letter
+    print full_line
