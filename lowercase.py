@@ -21,11 +21,16 @@
 #
 # print stdout()
 
+# Testing
+# def stdout(filename):
+#     input = open(filename, 'r+')
+#
+# print stdout('lowercase.txt')
 
-def stdout(filename):
-    input = open(filename, 'r+')
-    for line in input:
-        print line.lower()
-
-print stdout('lowercase.txt')
-
+# Final answer
+# import sys
+#
+#
+# input = open(sys.argv[1], 'r+')
+# for line in input:
+#     print line.lower()
