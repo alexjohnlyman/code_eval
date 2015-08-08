@@ -35,50 +35,52 @@
 # print line.strip()
 
 # Test 2
-def test_this(filename):
-    f = open(filename, 'r+')
-    for line in f:
-        x = int(line[0])
-        y = int(line[2])
-        n = int(str(line[4]) + str(line[5]))
-        line = ""
-        for k in range(1, n):
-            if (k % x == 0) and (k % y == 0):
-                k = " FB"
-                line += str(k)
-            elif k % x == 0:
-                k = " F"
-                line += str(k)
-            elif k % y == 0:
-                k = " B"
-                line += str(k)
-            else:
-                k = "{0: }".format(k)
-                line += str(k)
-        print line.strip()
-test_this("test.txt")
+# def test_this(filename):
+#     f = open(filename, 'r+')
+#     for line in f:
+#         numbers = line.split()
+#         x = int(numbers[0])
+#         y = int(numbers[1])
+#         n = int(numbers[2])
+#         line = ""
+#         for k in range(1, n+1):
+#             if (k % x == 0) and (k % y == 0):
+#                 k = " FB"
+#                 line += str(k)
+#             elif k % x == 0:
+#                 k = " F"
+#                 line += str(k)
+#             elif k % y == 0:
+#                 k = " B"
+#                 line += str(k)
+#             else:
+#                 k = "{0: }".format(k)
+#                 line += str(k)
+#         print line.strip()
+# test_this("test.txt")
 
 
 # Final Answer
-import sys
-
-f = open(sys.argv[1], 'r+')
-for line in f:
-    x = int(line[0])
-    y = int(line[2])
-    n = int(str(line[4]) + str(line[5]))
-    line = ""
-    for k in range(1, n):
-        if (k % x == 0) and (k % y == 0):
-            k = " FB"
-            line += str(k)
-        elif k % x == 0:
-            k = " F"
-            line += str(k)
-        elif k % y == 0:
-            k = " B"
-            line += str(k)
-        else:
-            k = "{0: }".format(k)
-            line += str(k)
-    print line.strip()
+# import sys
+#
+# f = open(sys.argv[1], 'r+')
+# for line in f:
+#     numbers = line.split()
+#     x = int(numbers[0])
+#     y = int(numbers[1])
+#     n = int(numbers[2])
+#     line = ""
+#     for k in range(1, n+1):
+#         if (k % x == 0) and (k % y == 0):
+#             k = " FB"
+#             line += str(k)
+#         elif k % x == 0:
+#             k = " F"
+#             line += str(k)
+#         elif k % y == 0:
+#             k = " B"
+#             line += str(k)
+#         else:
+#             k = "{0: }".format(k)
+#             line += str(k)
+#     print line.strip()
