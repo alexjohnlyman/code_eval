@@ -13,19 +13,29 @@
 # World Hello
 # CodeEval Hello
 
-def reverse_words(file_name):
-    with open(file_name, 'r+') as f:
-        line = f.read()
-        words = line.split()
-        # print line[::-1]
-        print words
-        # for phrase in line:
-        #     print phrase
-        #     for word in phrase:
-        #         words = line.split()
-        #         print phrase[::-1]
+
+# TESTING
+# def stdout(file_name):
+#     with open(file_name, 'r+') as f:
+#         divide_lines = f.readlines()
+#         for line in divide_lines:
+#             words = line.split()
+#             reverse_words = words[::-1]
+#             x = ' '.join(reverse_words)
+#             print x
+#
+# stdout('words.txt')
 
 
-reverse_words('words.txt')
 
+# FINAL ANSWER
+# import sys
+
+# f = open(sys.argv[1], 'r+')
+# divide_lines = f.readlines()
+# for line in divide_lines:
+#     words = line.split()
+#     reverse_words = words[::-1]
+#     x = ' '.join(reverse_words)
+#     print x
 
