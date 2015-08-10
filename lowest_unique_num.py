@@ -35,27 +35,48 @@
 
 
 # Testing - 2 (reading lines from a file, counting them and placing them in arrays)
-def low_unique_num(file):
-    f = open(file, 'r+')
-    for line in f:
-        count = dict()
-        line = line.replace(" ", "")
-        line = line.strip()
-        for i in line:
-            if i in line:
-                count[i] = count.get(i, 0) + 1
-        # print count
-        lowest_single_list = []
-        for key, value in count.iteritems():
-            lowest = 1
-            if value == lowest:
-                # print key
-                lowest_single_list.append(key)
-        print lowest_single_list
-        if lowest_single_list == []:
-            print '0'
-        else:
-            print min(lowest_single_list)
+# def low_unique_num(file):
+#     f = open(file, 'r+')
+#     for line in f:
+#         count = dict()
+#         lowest_single_list = []
+#         line = line.replace(" ", "")
+#         line = line.strip()
+#         for i in line:
+#             if i in line:
+#                 count[i] = count.get(i, 0) + 1
+#         for key, value in count.iteritems():
+#             lowest = 1
+#             if value == lowest:
+#                 lowest_single_list.append(key)
+#         if lowest_single_list == []:
+#             print '0'
+#         else:
+#             winner = line.index(min(lowest_single_list))
+#             print winner + 1
+#
+# low_unique_num("list_of_nums.txt")
 
 
-low_unique_num("list_of_nums.txt")
+# Final solution - Could probably be refactored some more
+
+# import sys
+#
+# f = open(sys.argv[1], 'r+')
+# for line in f:
+#     count = dict()
+#     lowest_single_list = []
+#     line = line.replace(" ", "")
+#     line = line.strip()
+#     for i in line:
+#         if i in line:
+#             count[i] = count.get(i, 0) + 1
+#     for key, value in count.iteritems():
+#         lowest = 1
+#         if value == lowest:
+#             lowest_single_list.append(key)
+#     if lowest_single_list == []:
+#         print '0'
+#     else:
+#         winner = line.index(min(lowest_single_list))
+#         print winner + 1
