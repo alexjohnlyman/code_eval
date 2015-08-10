@@ -9,7 +9,6 @@
 
 # Testing 1
 
-
 # test = 153
 # def armstrong(number):
 #     convert_number = str(number)
@@ -24,25 +23,48 @@
 
 # Testing 2 - added True/False output
 
-def armstrong(file):
-    f = open(file, 'r+')
-    for line in f:
-        number = int(line)
-        split_number = line.split()
-        convert_number = str(split_number)
-        power = len(str(convert_number))-4
-        total = 0
-        for num in convert_number:
-            if num is "[" or num is "]" or num is "'":
-                continue
-            else:
-                raised = pow(int(num), power)
-                total += raised
-        if total == number:
-            print True
-        else:
-            print False
-armstrong('numbers_armstrong.txt')
+# def armstrong(file):
+#     f = open(file, 'r+')
+#     for line in f:
+#         number = int(line)
+#         split_number = line.split()
+#         convert_number = str(split_number)
+#         power = len(str(convert_number))-4
+#         total = 0
+#         for num in convert_number:
+#             if num is "[" or num is "]" or num is "'":
+#                 continue
+#             else:
+#                 raised = pow(int(num), power)
+#                 total += raised
+#         if total == number:
+#             print True
+#         else:
+#             print False
+# armstrong('numbers_armstrong.txt')
+
+
+# Refactoring of solution
+
+
+# def armstrong(file):
+#     f = open(file, 'r+')
+#     for line in f:
+#         number = int(line.lstrip('[]'))
+#         convert_number = str(line.split())
+#         power = len(str(convert_number))-4
+#         total = 0
+#         for num in convert_number:
+#             if num is "[" or num is "]" or num is "'":
+#                 continue
+#             else:
+#                 raised = pow(int(num), power)
+#                 total += raised
+#         if total == number:
+#             print True
+#         else:
+#             print False
+# armstrong('numbers_armstrong.txt')
 
 
 # Final Solution
