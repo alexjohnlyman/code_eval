@@ -1,44 +1,43 @@
 # Write a program which determines the sum of the first 1000 prime numbers.
 # Print to stdout the sum of the first 1000 prime numbers, or 3682913
 
-# I need to add to the counter only after a number is confirmed prime.
+# Final Solution(s)
+# import math
 
-primes = []
 
-
-def stdout():
-    count = 3
-    while len(primes) < 200:
-        for y in range(2, count + 1):
-            for i in range(2, count):
-                if (y % i) == 0:
-                    break
-            else:
-                primes.append(count)
-        count += 1
-    return primes
-
-print stdout()
+# def is_prime(num):
+#     sq_root = int(math.ceil(math.sqrt(num)))
+#     for i in range(2, sq_root + 1):
+#         if num % i == 0:
+#             return False
+#     else:
+#         return True
 
 
 
+# Alternate is_prime method w/o math
 
-# prime_palin = []
-#
-# def stdout():
-#     for num in range(3, 1001):
-#         for i in range(2, num):
-#             if (num % i) == 0:
-#                 break
-#         else:
-#             palindrome(num)
-#     return prime_palin[-1]
-#
-#
-# def palindrome(y):
-#     y = str(y)
-#     if y[0] == y[-1]:
-#         prime_palin.append(y)
-#     return prime_palin
-#
-# print stdout()
+
+def is_prime(num):
+    sq_root = int(num**0.5)+1
+    for i in range(2, sq_root + 1):
+        if num % i == 0:
+            return False
+    else:
+        return True
+
+
+def check_up_to(number):
+    num_of_primes = 1
+    sum_of_primes = 2
+    i = 2
+    while num_of_primes < number:
+        if is_prime(i):
+            sum_of_primes += i
+            num_of_primes += 1
+            i += 1
+        else:
+            i += 1
+    print sum_of_primes
+
+check_up_to(1000)
