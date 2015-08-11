@@ -1,0 +1,8 @@
+Hello World,r
+Hello CodeEval,E
+Hello CodeEval,l
+Hello CodeEval,o
+Hello CodeEval,c
+Hello CodeEval,z
+This is a Time Test, T
+aaaaAocancianoc, o
