@@ -1,0 +1,7 @@
+3
+Hello World
+CodeEval
+Quick Fox
+A
+San Francisco
+testing that this one is now the longest

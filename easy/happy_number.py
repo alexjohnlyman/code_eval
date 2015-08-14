@@ -20,7 +20,8 @@
 # If the number is a happy number, print out 1. If not, print out 0.
 
 # Testing
-# test = 7
+
+# Old happy_or_not function
 # def happy_or_not(number):
 #     number = str(number)
 #     if number == "1":
@@ -37,12 +38,25 @@
 #                 happy_or_not(new_num)
 #             except RuntimeError:
 #                 print 0
-# happy_or_not(test)
+
+# # Potential refactored happy_or_not function
+# def happy_or_not(n):
+#     past = set()
+#     while n != 1:
+#         n = sum(int(i)**2 for i in str(n))
+#         if n in past:
+#             print 0
+#             break
+#         past.add(n)
+#     print 1
+#
+#
 # def happy_number_check(file):
 #     with open(file, 'r+') as f:
 #         for line in f:
 #             if line.strip().isdigit():
 #                 happy_or_not(line.strip())
+#
 # happy_number_check("happy_numbers.txt")
 
 
