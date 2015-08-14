@@ -35,17 +35,16 @@
 
 
 # loop over and have it sorted longest to shortest, then print out the number of lines that it asks for.
-def longest_lines(file):
-    with open(file, 'r+') as f:
-        number_of_lines = int(f.readline())
-        sorted_list = sorted(open(file, 'r+'), key=len, reverse=True)
-        longest_list = []
-        for word in sorted_list:
-            longest_list.append(word.strip('\n'))
-        print '\n'.join(longest_list[0:number_of_lines])
-
-longest_lines("longest_lines.txt")
-
+# def longest_lines(file):
+#     with open(file, 'r+') as f:
+#         number_of_lines = int(f.readline())
+#         sorted_list = sorted(f, key=len, reverse=True)
+#         longest_list = []
+#         for word in sorted_list:
+#             longest_list.append(word.strip('\n'))
+#         print '\n'.join(longest_list[0:number_of_lines])
+#
+# longest_lines("longest_lines.txt")
 
 
 # Final Solution
@@ -54,7 +53,7 @@ longest_lines("longest_lines.txt")
 
 # f = open(sys.argv[1], 'r+')
 # number_of_lines = int(f.readline())
-# sorted_list = sorted(open(file, 'r+'), key=len, reverse=True)
+# sorted_list = sorted(f, key=len, reverse=True)
 # longest_list = []
 # for word in sorted_list:
 #     longest_list.append(word.strip('\n'))
