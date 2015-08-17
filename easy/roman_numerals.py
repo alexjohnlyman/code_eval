@@ -1,11 +1,17 @@
 # ROMAN NUMERALS
 
 # I - 1
+# IV - 4
 # V - 5
+# IX - 9
 # X - 10
+# XL - 40
 # L - 50
+# XC - 90
 # C - 100
+# CD - 400
 # D - 500
+# CM - 900
 # M  - 1000
 
 # The exceptions to this rule occur for numbers having units values of 4 or 9, and for tens values of 40 or 90.
@@ -30,10 +36,38 @@
 # CCXCVI
 # MMMCMXCII
 
+# Expanded solution with error handling
+# def roman_nums(file):
+#     with open(file, 'r+') as f:
+#         for line in f:
+#             line = int(line)
+#             if not isinstance(line, type(1)):
+#                 raise TypeError, "expected integer, got %s" % type(line)
+#             if not 0 < line < 4000:
+#                 raise ValueError, "Argument must be between 1 and 3999"
+#             ints = (1000, 900,  500, 400, 100,  90, 50,  40, 10,  9,   5,  4,   1)
+#             nums = ('M',  'CM', 'D', 'CD','C', 'XC','L','XL','X','IX','V','IV','I')
+#             result = []
+#             for i in range(len(ints)):
+#                 count = int(line / ints[i])
+#                 result.append(nums[i] * count)
+#                 line -= ints[i] * count
+#             print ''.join(result)
+#
+# roman_nums("roman_numerals.txt")
+
 
 def roman_nums(file):
     with open(file, 'r+') as f:
         for line in f:
-            print line
+            line = int(line)
+            ints = (1000, 900,  500, 400, 100,  90, 50,  40, 10,  9,   5,  4,   1)
+            nums = ('M',  'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I')
+            result = []
+            for i in range(len(ints)):
+                count = int(line / ints[i])
+                result.append(nums[i] * count)
+                line -= ints[i] * count
+            print ''.join(result)
 
 roman_nums("roman_numerals.txt")
