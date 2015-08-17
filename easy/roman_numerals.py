@@ -71,3 +71,19 @@ def roman_nums(file):
             print ''.join(result)
 
 roman_nums("roman_numerals.txt")
+
+# Final Solution
+# import sys
+#
+#
+# f = open(sys.argv[1], 'r+')
+# for line in f:
+#     line = int(line)
+#     ints = (1000, 900,  500, 400, 100,  90, 50,  40, 10,  9,   5,  4,   1)
+#     nums = ('M',  'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I')
+#     result = []
+#     for i in range(len(ints)):
+#         count = int(line / ints[i])
+#         result.append(nums[i] * count)
+#         line -= ints[i] * count
+#     print ''.join(result)

@@ -26,6 +26,21 @@
 
 # Print out the minimum number of coins required to arrive at the total.
 
+# Testing - 2
+# def minimum_coins(file):
+#     f = open(file, 'r+')
+#     for line in f:
+#         line = int(line)
+#         ints = (5, 3, 1)
+#         total = 0
+#         for i in range(len(ints)):
+#             count = int(line / ints[i])
+#             total += count
+#             line -= ints[i] * count
+#         print total
+#
+# minimum_coins("minimum_coins.txt")
+
 
 # Testing - this needs to be refactored
 # def minimum_coins(file):
@@ -80,3 +95,18 @@
 #         else:
 #             num_of_coins += 2
 #     print num_of_coins
+
+
+# Final Solution - 2
+# import sys
+#
+# f = open(sys.argv[1], 'r+')
+# for line in f:
+#     line = int(line)
+#     ints = (5, 3, 1)
+#     total = 0
+#     for i in range(len(ints)):
+#         count = int(line / ints[i])
+#         total += count
+#         line -= ints[i] * count
+#     print total
