@@ -24,9 +24,30 @@
 # 300
 
 
-def hex_to_dec(filename):
-    f = open(filename, 'r+')
-    for line in f:
-        print line
+# def hex_to_dec(filename):
+#     f = open(filename, 'r+')
+#     for line in f:
+#         line = line.strip('\n')
+#         print int(line, 16)
+#
+# hex_to_dec("hex_to_decimal.txt")
 
-hex_to_dec("hex_to_decimal.txt")
+
+# Convert decimal to hex
+# test = 17
+# test_2 = 100
+# test_3 = 200
+# test_4 = 300
+#
+#
+# def hex_to_dec(num):
+#     print hex(num)
+
+#Eliminates 0x from hex number
+# def hex_to_dec(num):
+#     print hex(num).split('x')[1]
+#
+# hex_to_dec(test)
+# hex_to_dec(test_2)
+# hex_to_dec(test_3)
+# hex_to_dec(test_4)
